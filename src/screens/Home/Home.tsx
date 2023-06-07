@@ -1,4 +1,4 @@
-import Card from "@/components/Card";
+import Details from "@/components/Details";
 import Filter from "@/components/Filter";
 import Header from "@/components/Header";
 import ScrollList from "@/components/ScrollList";
@@ -11,7 +11,10 @@ export const Home = () => {
       <Header />
       <Filter />
       <Title />
-      <ScrollList />
+      <div className="flex">
+        <ScrollList />
+        <Details />
+      </div>
     </div>
   );
 };

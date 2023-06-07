@@ -1,16 +1,21 @@
-import React from "react";
 import Image from "next/image";
-
-import { HiOutlineLocationMarker } from "react-icons/hi";
+import React from "react";
 import { AiOutlineClockCircle } from "react-icons/ai";
-
+import { HiOutlineLocationMarker } from "react-icons/hi";
 import pharmacy from "../../../assets/phamacy.svg";
+import Button from "../Button";
 
-export const Card = (): JSX.Element => {
+export const Details = (): JSX.Element => {
   return (
-    <div className="shadow-lg shadow-zinc-50 p-4 max-w-lg rounded-md mb-3 flex justify-between">
+    <div
+      className="shadow-lg shadow-zinc-50 w-[70vw] 
+    p-4 rounded-md mb-3 flex flex-col items-center "
+    >
+      <div className="bg-[url('/blob.svg')] bg-no-repeat bg-contain">
+        <Image src={pharmacy} alt="" />
+      </div>
       <div>
-        <div className="flex items-center gap-3">
+        <div className="flex flex-col items-center gap-3">
           <h2 className="text-xl font-semibold">Farmacia</h2>
           <p className="text-xs text-green-500">Aberto agora</p>
         </div>
@@ -34,8 +39,8 @@ export const Card = (): JSX.Element => {
           </div>
         </div>
       </div>
-      <div className="bg-[url('/blob.svg')] bg-no-repeat bg-contain">
-        <Image src={pharmacy} alt="" />
+      <div className="mt-6">
+        <Button text="Entrar em contato" />
       </div>
     </div>
   );
