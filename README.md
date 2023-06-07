@@ -5,7 +5,7 @@
    <a href="https://www.linkedin.com/in/leogonzaga/">
       <img alt="Léo Gonzaga" src="https://img.shields.io/badge/-Leo Gonzaga-00aeff?style=flat&logo=Linkedin&logoColor=white" />
    </a>
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/LeoGonzaga/next-blizzard-main-mf?color=00aeff">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/LeoGonzaga/vitrine-frontend?color=00aeff">
 
   <a href="https://github.com/LeoGonzaga/vitrine-frontend/commits/main">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/leoGonzaga/next-blizzard-main-mf?color=00aeff">
