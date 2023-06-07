@@ -11,7 +11,7 @@ export const Input = (): JSX.Element => {
         rounded-md py-3 pl-3 pr-3
         shadow-sm focus:outline-none
         focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-        placeholder="Search for anything..."
+        placeholder="Digite o nome do comércio..."
         type="text"
         name="search"
       />
