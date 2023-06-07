@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-	--primary: rgb(233, 233, 233);
-	--secondary: rgb(150, 150, 150);
+	--primary: rgb(255, 255, 255);
+	--secondary: rgb(255, 255, 255);
   }
 
 

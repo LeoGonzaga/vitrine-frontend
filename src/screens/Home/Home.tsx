@@ -11,7 +11,7 @@ export const Home = () => {
       <Header />
       <Filter />
       <Title />
-      <div className="flex">
+      <div className="flex gap-20 flex-wrap-reverse items-center content-center justify-center">
         <ScrollList />
         <Details />
       </div>

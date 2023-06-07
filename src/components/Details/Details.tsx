@@ -8,7 +8,7 @@ import Button from "../Button";
 export const Details = (): JSX.Element => {
   return (
     <div
-      className="shadow-lg shadow-zinc-50 w-[70vw] 
+      className="shadow-lg shadow-zinc-50 
     p-4 rounded-md mb-3 flex flex-col items-center "
     >
       <div className="bg-[url('/blob.svg')] bg-no-repeat bg-contain">
