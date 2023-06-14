@@ -1,5 +1,8 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Card from "../Card";
+import Details from "../Details";
 
 const MOCK = [
   {
@@ -28,7 +31,7 @@ const MOCK = [
     },
   },
   {
-    name: "Farmácia 1",
+    name: "Farmácia 2",
     address: {
       street: "Rua 1",
       number: "123",
@@ -52,7 +55,7 @@ const MOCK = [
     },
   },
   {
-    name: "Farmácia 1",
+    name: "Farmácia 3",
     address: {
       street: "Rua 1",
       number: "123",
@@ -126,11 +129,22 @@ const MOCK = [
 ];
 
 export const ScrollList = (): JSX.Element => {
+  const [selectedItem, setSelectedItem] = useState(-1);
+
+  const handleSelectedItem = (value: number) => {
+    setSelectedItem(value);
+  };
+
   return (
-    <div className="mt-2 max-h-[70vh] overflow-y-auto">
-      {MOCK.map((elem, index) => (
-        <Card key={index} {...elem} />
-      ))}
-    </div>
+    <>
+      {selectedItem > 0 && <Details onBack={handleSelectedItem} />}
+      <div className="mt-2 max-h-[70vh] overflow-y-auto">
+        {MOCK.map((elem, index) => (
+          <div key={index} onClick={() => setSelectedItem(index)}>
+            <Card {...elem} key={index} />
+          </div>
+        ))}
+      </div>
+    </>
   );
 };

@@ -6,12 +6,16 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 
 import pharmacy from "../../../assets/phamacy.svg";
 
-export const Card = (): JSX.Element => {
+interface ICard {
+  name: string;
+}
+
+export const Card = ({ name }: ICard): JSX.Element => {
   return (
-    <div className="shadow-lg shadow-zinc-50 p-4 max-w-lg rounded-md mb-3 flex justify-between">
+    <div className="shadow-lg shadow-zinc-50 p-4 max-w-lg rounded-md mb-3 flex justify-between cursor-pointer">
       <div>
         <div className="flex items-center gap-3">
-          <h2 className="text-xl font-semibold">Farmacia</h2>
+          <h2 className="text-xl font-semibold">{name}</h2>
           <p className="text-xs text-green-500">Aberto agora</p>
         </div>
         <div className="pt-1 text-xs flex gap-2 max-w-sm">

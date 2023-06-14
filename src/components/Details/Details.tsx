@@ -2,15 +2,27 @@ import Image from "next/image";
 import React from "react";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { HiOutlineLocationMarker } from "react-icons/hi";
+import { IoIosArrowBack } from "react-icons/io";
 import pharmacy from "../../../assets/phamacy.svg";
 import Button from "../Button";
 
-export const Details = (): JSX.Element => {
+interface IDetails {
+  onBack: (value: number) => void;
+}
+
+export const Details = ({ onBack }: IDetails): JSX.Element => {
   return (
     <div
       className="shadow-lg shadow-zinc-50 
-    p-4 rounded-md mb-3 flex flex-col items-center "
+    p-4 rounded-md mb-3 flex flex-col items-center h-screen mt-10 absolute bg-white w-full"
     >
+      <div className="w-full">
+        <button onClick={() => onBack(-1)} className="flex">
+          <IoIosArrowBack />
+          <span className="font-medium">Voltar</span>
+        </button>
+      </div>
+
       <div className="bg-[url('/blob.svg')] bg-no-repeat bg-contain">
         <Image src={pharmacy} alt="" />
       </div>
