@@ -281,11 +281,11 @@ export const ScrollList = (): JSX.Element => {
 
   return (
     <>
-      {selectedItem > 0 && <Details onBack={handleSelectedItem} />}
+      {selectedItem > -1 && <Details onBack={handleSelectedItem} />}
       <div className="mt-2 max-h-[100vh] overflow-y-auto w-full flex flex-wrap gap-4 justify-center">
         {MOCK.map((elem, index) => (
           <div key={index} onClick={() => setSelectedItem(index)}>
-            <Card {...elem} key={index} />
+            <Card {...elem} key={index} color={index % 3} />
           </div>
         ))}
       </div>

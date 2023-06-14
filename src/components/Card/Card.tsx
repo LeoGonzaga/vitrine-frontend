@@ -8,9 +8,10 @@ import pharmacy from "../../../assets/phamacy.svg";
 
 interface ICard {
   name: string;
+  color: number;
 }
 
-export const Card = ({ name }: ICard): JSX.Element => {
+export const Card = ({ name, color }: ICard): JSX.Element => {
   return (
     <div className="shadow-lg shadow-zinc-50 p-4 max-w-lg rounded-md mb-3 flex justify-between cursor-pointer">
       <div>
@@ -38,7 +39,7 @@ export const Card = ({ name }: ICard): JSX.Element => {
           </div>
         </div>
       </div>
-      <div className="bg-[url('/blob.svg')] bg-no-repeat bg-contain">
+      <div className={`bg-[url('/blob0.svg')] bg-no-repeat bg-contain`}>
         <Image src={pharmacy} alt="" />
       </div>
     </div>

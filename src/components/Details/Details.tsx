@@ -23,7 +23,7 @@ export const Details = ({ onBack }: IDetails): JSX.Element => {
         </button>
       </div>
 
-      <div className="bg-[url('/blob.svg')] bg-no-repeat bg-contain">
+      <div className="bg-[url('/blob0.svg')] bg-no-repeat bg-contain">
         <Image src={pharmacy} alt="" />
       </div>
       <div>
